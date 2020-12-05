@@ -1,0 +1,71 @@
+using System;
+using System.Linq;
+using System.Text;
+
+
+
+namespace HelloWorld
+{
+    class Program
+
+    {
+
+        static void Main(string[] args)
+        {
+            try
+            {
+                int countNum = 0;
+                int stdMark = 0;
+                float stdavg = 0;
+                while (stdMark != -1) {
+                    Console.WriteLine("Enter the marks here");
+                    string stringStdMarks = Console.ReadLine();
+                    if (int.TryParse(stringStdMarks, out stdMark) & stdMark <= 20 & stdMark >= 0) {
+                        stdavg = stdavg + stdMark;
+                        countNum++;
+                    }
+                    else if (stringStdMarks.Equals("-1")){
+                        Console.WriteLine("The average value of the marks is "+avgCalculater(stdavg, countNum));
+                        Console.Read();
+                        break;
+                    }
+                    else {
+                        Console.WriteLine("Please enter a valid number");
+                    }
+
+                }
+                
+                
+                
+
+            }
+            catch (Exception) { Console.WriteLine("There is a Exception"); }
+
+            
+
+        }
+        public static float avgCalculater(float avg, int count) {
+
+            return avg / count;
+        }
+       
+   
+   
+    }
+}
+
+    
+
+
+/*
+ this is multi line comment
+ */
+ //this is a single line comment
+
+// Class names like ClientActivity
+//Method name like CalculateValue
+//Method arguments like firstNumber
+// local variable like itemCount
+// try to use userCount intrested of usrcnt
+
+
